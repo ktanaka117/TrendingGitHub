@@ -47,6 +47,12 @@ class TopTableViewController: UITableViewController {
         })
     }
     
+    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        let repositoryDetailViewController = RepositoryDetailViewController()
+        repositoryDetailViewController.title = libTitleArray[indexPath.row]
+        navigationController?.pushViewController(repositoryDetailViewController, animated: true)
+    }
+    
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return libTitleArray.count
     }
