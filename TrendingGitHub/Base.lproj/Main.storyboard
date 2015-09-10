@@ -4,7 +4,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
     </dependencies>
     <scenes>
-        <!--Top Table View Controller-->
+        <!--Trending-->
         <scene sceneID="Xtd-bf-5jo">
             <objects>
                 <tableViewController id="4bj-ik-g0w" customClass="TopTableViewController" customModule="TrendingGitHub" customModuleProvider="target" sceneMemberID="viewController">
@@ -25,7 +25,7 @@
                             <outlet property="delegate" destination="4bj-ik-g0w" id="MWT-DY-dxZ"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="g4t-LD-2D8"/>
+                    <navigationItem key="navigationItem" title="Trending" id="g4t-LD-2D8"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3ar-Mk-7rp" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
