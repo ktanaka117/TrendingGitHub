@@ -26,18 +26,18 @@ class TopTableViewController: UITableViewController {
     }
     
     func getTrending() {
-        Alamofire.request(.GET, "https://github.com/trending?l=swift").response({[weak self] request, response, data, error in
+        Alamofire.request(.GET, "https://github.com/trending?l=swift").response({ [weak self] request, response, data, error in
             
             if let s = self {
                 if let doc = Kanna.HTML(html: data!, encoding: NSUTF8StringEncoding) {
                     // print an element of one library.
                     println(doc.css("h3.repo-list-name").first!.toHTML)
                     
-                    for node2 in doc.css("h3.repo-list-name") {
-                        let str = node2.text?.stringByReplacingOccurrencesOfString(" ", withString: "", options: nil, range: nil)
+                    for titleNode in doc.css("h3.repo-list-name") {
+                        let nDrop = titleNode.text?.stringByReplacingOccurrencesOfString("\n", withString: "", options: nil, range: nil)
                         
-                        let str2 = str?.stringByReplacingOccurrencesOfString("\n", withString: "", options: nil, range: nil)
-                        println(str2)
+                        let spaceDrop = nDrop?.stringByReplacingOccurrencesOfString(" ", withString: "", options: nil, range: nil)
+                        println(spaceDrop)
                         
                         s.libTitleArray.append(spaceDrop!)
                     }
