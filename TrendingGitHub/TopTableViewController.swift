@@ -15,6 +15,7 @@ let cellID = "Cell"
 class TopTableViewController: UITableViewController {
     
     var libTitleArray: [String] = []
+    var libDescriptionArray: [String] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -38,7 +39,13 @@ class TopTableViewController: UITableViewController {
                         let str2 = str?.stringByReplacingOccurrencesOfString("\n", withString: "", options: nil, range: nil)
                         println(str2)
                         
-                        s.libTitleArray.append(str2!)
+                        s.libTitleArray.append(spaceDrop!)
+                    }
+                    
+                    for descriptionNode in doc.css("p.repo-list-description") {
+                        let nDrop = descriptionNode.text?.stringByReplacingOccurrencesOfString("\n", withString: "", options: nil, range: nil)
+                        
+                        s.libDescriptionArray.append(nDrop!)
                     }
                     
                     s.tableView.reloadData()
@@ -58,7 +65,8 @@ class TopTableViewController: UITableViewController {
     }
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier(cellID, forIndexPath: indexPath) as! UITableViewCell
+        let cell = UITableViewCell(style: UITableViewCellStyle.Subtitle, reuseIdentifier: cellID)
+        cell.detailTextLabel?.text = libDescriptionArray[indexPath.row]
         cell.textLabel?.text = libTitleArray[indexPath.row]
         
         return cell
