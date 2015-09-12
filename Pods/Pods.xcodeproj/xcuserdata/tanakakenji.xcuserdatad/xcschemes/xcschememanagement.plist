@@ -9,6 +9,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>FLAnimatedImage.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Kanna.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -27,22 +32,27 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>3351D4FC2FB9AF2D1A20E623BEB89DEB</key>
+		<key>14D0E77BBE26FFC7F0A8BEEC9C9D601C</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>A5F89A55B986DFF30AE6C582E0E6AD6D</key>
+		<key>539CC7D78B9BA91B66F4FF4AFAB53F6B</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>6D686C84E971F401DE848BCD580A8EF9</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>7133701F00810EE5EBC825B71AF49738</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
 		<key>B9A04D3C9B208813656510FDA8ADAE02</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>BF8D08B65CD2ACB70C06AACAF7A06AD9</key>
 		<dict>
 			<key>primary</key>
 			<true/>

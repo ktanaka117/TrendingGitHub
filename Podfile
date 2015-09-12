@@ -7,3 +7,4 @@ use_frameworks!
 pod 'Alamofire', '1.3.1'
 pod 'SwiftyJSON'
 pod 'Kanna'
+pod 'FLAnimatedImage', '~> 1.0'
