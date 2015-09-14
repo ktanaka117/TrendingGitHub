@@ -68,7 +68,6 @@
 		296135821BA404370008DB17 /* Networking */ = {
 			isa = PBXGroup;
 			children = (
-				296135851BA404780008DB17 /* Router.swift */,
 			);
 			name = Networking;
 			sourceTree = "<group>";
