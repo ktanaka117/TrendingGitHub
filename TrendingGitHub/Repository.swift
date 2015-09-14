@@ -7,3 +7,21 @@
 //
 
 import Foundation
+
+struct Repository {
+    var title: String!
+    var description: String!
+    var star: Int!
+    var builderName: String!
+    
+    init() {
+        
+    }
+    
+//    init(title: String, description: String, star: Int, builderName: String) {
+//        self.title = title
+//        self.description = description
+//        self.star = star
+//        self.builderName = builderName
+//    }
+}

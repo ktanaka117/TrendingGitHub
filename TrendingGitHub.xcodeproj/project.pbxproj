@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		296135881BA406D40008DB17 /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 296135871BA406D40008DB17 /* Repository.swift */; };
 		2969AE931BA1862200B354A6 /* RepositoryDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2969AE921BA1862200B354A6 /* RepositoryDetailViewController.swift */; };
 		2990B9431BA154C000031B47 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2990B9421BA154C000031B47 /* AppDelegate.swift */; };
 		2990B9451BA154C000031B47 /* TopTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2990B9441BA154C000031B47 /* TopTableViewController.swift */; };
@@ -29,6 +30,7 @@
 
 /* Begin PBXFileReference section */
 		033C21C9D230AD09B951C13C /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		296135871BA406D40008DB17 /* Repository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Repository.swift; sourceTree = "<group>"; };
 		2969AE921BA1862200B354A6 /* RepositoryDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RepositoryDetailViewController.swift; sourceTree = "<group>"; };
 		2990B93D1BA154C000031B47 /* TrendingGitHub.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TrendingGitHub.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2990B9411BA154C000031B47 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -309,6 +311,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2990B9451BA154C000031B47 /* TopTableViewController.swift in Sources */,
+				296135881BA406D40008DB17 /* Repository.swift in Sources */,
 				2969AE931BA1862200B354A6 /* RepositoryDetailViewController.swift in Sources */,
 				2990B9431BA154C000031B47 /* AppDelegate.swift in Sources */,
 			);
