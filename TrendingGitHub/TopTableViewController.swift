@@ -14,8 +14,7 @@ let cellID = "Cell"
 
 class TopTableViewController: UITableViewController {
     
-    var libTitleArray: [String] = []
-    var libDescriptionArray: [String] = []
+    var repositories: [Repository] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,50 +25,53 @@ class TopTableViewController: UITableViewController {
     }
     
     func getTrending() {
+        
+        var elementIndex = 0
+        
         Alamofire.request(.GET, "https://github.com/trending?l=swift").response({ [weak self] request, response, data, error in
-            
             if let s = self {
                 if let doc = Kanna.HTML(html: data!, encoding: NSUTF8StringEncoding) {
-                    // print an element of one library.
-                    println(doc.css("h3.repo-list-name").first!.toHTML)
                     
-                    for titleNode in doc.css("h3.repo-list-name") {
-                        let nDrop = titleNode.text?.stringByReplacingOccurrencesOfString("\n", withString: "", options: nil, range: nil)
+                    for node in doc.css(".repo-list-item") {
+                        let repoListName = s.dropUnneccessaryElement(doc.css(".repo-list-name")[elementIndex].text!)
+                        let repoListDescription = s.dropUnneccessaryElement(doc.css(".repo-list-description")[elementIndex].text!)
                         
-                        let spaceDrop = nDrop?.stringByReplacingOccurrencesOfString(" ", withString: "", options: nil, range: nil)
-                        println(spaceDrop)
+                        var repository = Repository()
+                        repository.title = repoListName
+                        repository.description = repoListDescription
+                        s.repositories.append(repository)
                         
-                        s.libTitleArray.append(spaceDrop!)
+                        elementIndex++
                     }
-                    
-                    for descriptionNode in doc.css("p.repo-list-description") {
-                        let nDrop = descriptionNode.text?.stringByReplacingOccurrencesOfString("\n", withString: "", options: nil, range: nil)
-                        
-                        s.libDescriptionArray.append(nDrop!)
-                    }
-                    
-                    s.tableView.reloadData()
                 }
+                s.tableView.reloadData()
             }
         })
     }
     
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         let repositoryDetailViewController = RepositoryDetailViewController()
-        repositoryDetailViewController.title = libTitleArray[indexPath.row]
+        repositoryDetailViewController.title = repositories[indexPath.row].title
         navigationController?.pushViewController(repositoryDetailViewController, animated: true)
     }
     
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return libTitleArray.count
+        return repositories.count
     }
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = UITableViewCell(style: UITableViewCellStyle.Subtitle, reuseIdentifier: cellID)
-        cell.detailTextLabel?.text = libDescriptionArray[indexPath.row]
-        cell.textLabel?.text = libTitleArray[indexPath.row]
+        cell.textLabel?.text = repositories[indexPath.row].title
+        cell.detailTextLabel?.text = repositories[indexPath.row].description
         
         return cell
+    }
+    
+    func dropUnneccessaryElement(text: String) -> String {
+        let nDrop = text.stringByReplacingOccurrencesOfString("\n", withString: "", options: nil, range: nil)
+        let spaceDrop = nDrop.stringByReplacingOccurrencesOfString(" ", withString: "", options: nil, range: nil)
+        
+        return spaceDrop
     }
 
 }
