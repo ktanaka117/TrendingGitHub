@@ -63,6 +63,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		296135821BA404370008DB17 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				296135851BA404780008DB17 /* Router.swift */,
+			);
+			name = Networking;
+			sourceTree = "<group>";
+		};
+		296135831BA4044C0008DB17 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				296135871BA406D40008DB17 /* Repository.swift */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
 		2990B9341BA154C000031B47 = {
 			isa = PBXGroup;
 			children = (
@@ -86,6 +102,8 @@
 		2990B93F1BA154C000031B47 /* TrendingGitHub */ = {
 			isa = PBXGroup;
 			children = (
+				296135831BA4044C0008DB17 /* Models */,
+				296135821BA404370008DB17 /* Networking */,
 				2990B9421BA154C000031B47 /* AppDelegate.swift */,
 				2990B9441BA154C000031B47 /* TopTableViewController.swift */,
 				2969AE921BA1862200B354A6 /* RepositoryDetailViewController.swift */,
