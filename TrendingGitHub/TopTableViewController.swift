@@ -28,10 +28,9 @@ class TopTableViewController: UITableViewController {
         
         var elementIndex = 0
         
-        Alamofire.request(.GET, "https://github.com/trending?l=swift").response({ [weak self] request, response, data, error in
+        Alamofire.request(Router.Ranking(language: "swift")).response({ [weak self] request, response, data, error in
             if let s = self {
                 if let doc = Kanna.HTML(html: data!, encoding: NSUTF8StringEncoding) {
-                    
                     for node in doc.css(".repo-list-item") {
                         let repoListName = s.dropUnneccessaryElement(doc.css(".repo-list-name")[elementIndex].text!)
                         let repoListDescription = s.dropUnneccessaryElement(doc.css(".repo-list-description")[elementIndex].text!)
