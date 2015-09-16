@@ -7,8 +7,7 @@
 //
 
 import UIKit
-import Kanna
-import Alamofire
+import PromiseKit
 
 let cellID = "Cell"
 
@@ -21,31 +20,17 @@ class TopTableViewController: UITableViewController {
         
         tableView.registerClass(UITableViewCell.self, forCellReuseIdentifier: cellID)
         
-        getTrending()
+        loadTrending()
     }
     
-    func getTrending() {
-        
-        var elementIndex = 0
-        
-        Alamofire.request(Router.Ranking(language: "swift")).response({ [weak self] request, response, data, error in
-            if let s = self {
-                if let doc = Kanna.HTML(html: data!, encoding: NSUTF8StringEncoding) {
-                    for node in doc.css(".repo-list-item") {
-                        let repoListName = s.dropUnneccessaryElement(doc.css(".repo-list-name")[elementIndex].text!)
-                        let repoListDescription = s.dropUnneccessaryElement(doc.css(".repo-list-description")[elementIndex].text!)
-                        
-                        var repository = Repository()
-                        repository.title = repoListName
-                        repository.description = repoListDescription
-                        s.repositories.append(repository)
-                        
-                        elementIndex++
-                    }
-                }
-                s.tableView.reloadData()
-            }
-            })
+    func loadTrending() {
+        firstly {
+            Trending.getTrendingTask()
+        }.then { repositories in
+            self.repositories = repositories
+        }.finally {
+            self.tableView.reloadData()
+        }
     }
     
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
