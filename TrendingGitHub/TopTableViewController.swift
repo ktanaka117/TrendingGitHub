@@ -45,7 +45,7 @@ class TopTableViewController: UITableViewController {
                 }
                 s.tableView.reloadData()
             }
-        })
+            })
     }
     
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
@@ -72,6 +72,6 @@ class TopTableViewController: UITableViewController {
         
         return spaceDrop
     }
-
+    
 }
 
