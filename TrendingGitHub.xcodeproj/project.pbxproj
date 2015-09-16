@@ -16,6 +16,7 @@
 		2990B94A1BA154C000031B47 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2990B9491BA154C000031B47 /* Images.xcassets */; };
 		2990B94D1BA154C000031B47 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2990B94B1BA154C000031B47 /* LaunchScreen.xib */; };
 		2990B9591BA154C000031B47 /* TrendingGitHubTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2990B9581BA154C000031B47 /* TrendingGitHubTests.swift */; };
+		29E660A01BA95B32008F55A1 /* Trending.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29E6609F1BA95B32008F55A1 /* Trending.swift */; };
 		5A27F831F93230DC9D9B9F9E /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B27EDCD17168F655A02BC224 /* Pods.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 /* End PBXBuildFile section */
 
@@ -44,6 +45,7 @@
 		2990B9521BA154C000031B47 /* TrendingGitHubTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TrendingGitHubTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2990B9571BA154C000031B47 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2990B9581BA154C000031B47 /* TrendingGitHubTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrendingGitHubTests.swift; sourceTree = "<group>"; };
+		29E6609F1BA95B32008F55A1 /* Trending.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Trending.swift; sourceTree = "<group>"; };
 		81F962D5AB58806ED1512245 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		B27EDCD17168F655A02BC224 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -71,6 +73,7 @@
 			isa = PBXGroup;
 			children = (
 				2963513E1BA84D7C00C5AEC2 /* Router.swift */,
+				29E6609F1BA95B32008F55A1 /* Trending.swift */,
 			);
 			name = Networking;
 			sourceTree = "<group>";
@@ -312,6 +315,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				29E660A01BA95B32008F55A1 /* Trending.swift in Sources */,
 				2990B9451BA154C000031B47 /* TopTableViewController.swift in Sources */,
 				296135881BA406D40008DB17 /* Repository.swift in Sources */,
 				2963513F1BA84D7C00C5AEC2 /* Router.swift in Sources */,
