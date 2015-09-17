@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		295831811BAA8C300087A23A /* Trending+README.swift in Sources */ = {isa = PBXBuildFile; fileRef = 295831801BAA8C300087A23A /* Trending+README.swift */; };
 		296135881BA406D40008DB17 /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 296135871BA406D40008DB17 /* Repository.swift */; };
 		2963513F1BA84D7C00C5AEC2 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2963513E1BA84D7C00C5AEC2 /* Router.swift */; };
 		2969AE931BA1862200B354A6 /* RepositoryDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2969AE921BA1862200B354A6 /* RepositoryDetailViewController.swift */; };
@@ -33,6 +34,7 @@
 /* Begin PBXFileReference section */
 		033C21C9D230AD09B951C13C /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		2958317F1BAA892E0087A23A /* TrendingGitHub-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TrendingGitHub-Bridging-Header.h"; sourceTree = "<group>"; };
+		295831801BAA8C300087A23A /* Trending+README.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Trending+README.swift"; sourceTree = "<group>"; };
 		296135871BA406D40008DB17 /* Repository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Repository.swift; sourceTree = "<group>"; };
 		2963513E1BA84D7C00C5AEC2 /* Router.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
 		2969AE921BA1862200B354A6 /* RepositoryDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RepositoryDetailViewController.swift; sourceTree = "<group>"; };
@@ -75,6 +77,7 @@
 			children = (
 				2963513E1BA84D7C00C5AEC2 /* Router.swift */,
 				29E6609F1BA95B32008F55A1 /* Trending.swift */,
+				295831801BAA8C300087A23A /* Trending+README.swift */,
 			);
 			name = Networking;
 			sourceTree = "<group>";
@@ -322,6 +325,7 @@
 				296135881BA406D40008DB17 /* Repository.swift in Sources */,
 				2963513F1BA84D7C00C5AEC2 /* Router.swift in Sources */,
 				2969AE931BA1862200B354A6 /* RepositoryDetailViewController.swift in Sources */,
+				295831811BAA8C300087A23A /* Trending+README.swift in Sources */,
 				2990B9431BA154C000031B47 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
