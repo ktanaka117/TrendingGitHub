@@ -2,6 +2,7 @@ PODS:
   - Alamofire (1.3.1)
   - FLAnimatedImage (1.0.8)
   - Kanna (0.1.4)
+  - MMMarkdown (0.5)
   - OMGHTTPURLRQ (2.1.3):
     - OMGHTTPURLRQ/RQ (= 2.1.3)
   - OMGHTTPURLRQ/FormURLEncode (2.1.3)
@@ -27,6 +28,7 @@ DEPENDENCIES:
   - Alamofire (= 1.3.1)
   - FLAnimatedImage (~> 1.0)
   - Kanna
+  - MMMarkdown
   - PromiseKit (~> 2.0)
   - SwiftyJSON
 
@@ -34,6 +36,7 @@ SPEC CHECKSUMS:
   Alamofire: e4ab637e3195b645c814b87a652373439e59f2a4
   FLAnimatedImage: f9422f796135aff80d8c00b2afc48015bb746e24
   Kanna: d133ca5886b14efbcb8f8029389dfed8599c8d37
+  MMMarkdown: 74e6a040d7c41419d86c0ec22b2a49755a10e0fd
   OMGHTTPURLRQ: c4268dea4295b585d711055dbcd87bfa82badd5f
   PromiseKit: 9c92257e39abf4b634533d44268592dfc6e4b5c2
   SwiftyJSON: ae2d0a3d68025d136602a33c4ee215091ced3e33
