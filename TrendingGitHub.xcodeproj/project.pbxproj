@@ -32,6 +32,7 @@
 
 /* Begin PBXFileReference section */
 		033C21C9D230AD09B951C13C /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		2958317F1BAA892E0087A23A /* TrendingGitHub-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TrendingGitHub-Bridging-Header.h"; sourceTree = "<group>"; };
 		296135871BA406D40008DB17 /* Repository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Repository.swift; sourceTree = "<group>"; };
 		2963513E1BA84D7C00C5AEC2 /* Router.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
 		2969AE921BA1862200B354A6 /* RepositoryDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RepositoryDetailViewController.swift; sourceTree = "<group>"; };
@@ -114,6 +115,7 @@
 				2990B9421BA154C000031B47 /* AppDelegate.swift */,
 				2990B9441BA154C000031B47 /* TopTableViewController.swift */,
 				2969AE921BA1862200B354A6 /* RepositoryDetailViewController.swift */,
+				2958317F1BAA892E0087A23A /* TrendingGitHub-Bridging-Header.h */,
 				2990B9461BA154C000031B47 /* Main.storyboard */,
 				2990B9491BA154C000031B47 /* Images.xcassets */,
 				2990B94B1BA154C000031B47 /* LaunchScreen.xib */,
@@ -451,6 +453,7 @@
 				INFOPLIST_FILE = TrendingGitHub/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "TrendingGitHub/TrendingGitHub-Bridging-Header.h";
 			};
 			name = Debug;
 		};
@@ -462,6 +465,7 @@
 				INFOPLIST_FILE = TrendingGitHub/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "TrendingGitHub/TrendingGitHub-Bridging-Header.h";
 			};
 			name = Release;
 		};
