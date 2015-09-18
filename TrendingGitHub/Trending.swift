@@ -19,28 +19,38 @@ class Trending {
         
         return Promise { fulfill, reject in
             let request = Alamofire.request(Router.Ranking(language: "swift"))
-            Alamofire.request(Router.Ranking(language: "swift")).response({ request, response, data, error in
+            request.response({ request, response, data, error in
                 if let error = error {
                     reject(error)
                 } else {
-                    if let doc = Kanna.HTML(html: data!, encoding: NSUTF8StringEncoding) {
-                        for node in doc.css(".repo-list-item") {
-                            let repoListName = dropUnneccessaryElement(doc.css(".repo-list-name")[elementIndex].text!)
-                            let repoListDescription = dropUnneccessaryElement(doc.css(".repo-list-description")[elementIndex].text!)
-                            
-                            var repository = Repository()
-                            repository.title = repoListName
-                            repository.description = repoListDescription
-                            repositories.append(repository)
-                            
-                            elementIndex++
+                    if let data = data {
+                        if let doc = Kanna.HTML(html: data, encoding: NSUTF8StringEncoding) {
+                            for node in doc.css(".repo-list-item") {
+                                let repoBuilder = doc.css(".prefix")[elementIndex].text!
+                                let repoName = getTitle(dropUnneccessaryElement(doc.css(".repo-list-name")[elementIndex].text!))
+                                let repoDescription = dropUnneccessaryElement(doc.css(".repo-list-description")[elementIndex].text!)
+                                
+                                var repository = Repository()
+                                repository.builder = repoBuilder
+                                repository.title = repoName
+                                repository.description = repoDescription
+                                repositories.append(repository)
+                                
+                                elementIndex++
+                            }
+                            fulfill(repositories)
                         }
-                        fulfill(repositories)
                     }
                 }
             })
         }
     }
+}
+
+func getTitle(text: String) -> String {
+    var str: NSString = text
+    var loc = str.rangeOfString("/").location
+    return str.substringFromIndex(loc+1)
 }
 
 func dropUnneccessaryElement(text: String) -> String {

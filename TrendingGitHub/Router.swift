@@ -11,11 +11,14 @@ import Alamofire
 
 enum Router: URLRequestConvertible {
     case Ranking(language: String)
+    case Readme(builder: String, repositoryTitle: String)
     
     var URLString: String {
         switch self {
         case .Ranking(let language):
             return "https://github.com/trending?l=\(language)"
+        case .Readme(let builder, let repositoryTitle):
+            return "https://github.com/\(builder)/\(repositoryTitle)/raw/master/README.md"
         }
     }
     

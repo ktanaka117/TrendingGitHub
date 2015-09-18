@@ -34,8 +34,7 @@ class TopTableViewController: UITableViewController {
     }
     
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        let repositoryDetailViewController = RepositoryDetailViewController()
-        repositoryDetailViewController.title = repositories[indexPath.row].title
+        let repositoryDetailViewController = RepositoryDetailViewController(repository: repositories[indexPath.row])
         navigationController?.pushViewController(repositoryDetailViewController, animated: true)
     }
     
