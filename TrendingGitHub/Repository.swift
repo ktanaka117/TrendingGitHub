@@ -12,7 +12,7 @@ struct Repository {
     var title: String!
     var description: String!
     var star: Int!
-    var builderName: String!
+    var builder: String!
     
     init() {
         
