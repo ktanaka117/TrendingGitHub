@@ -19,23 +19,25 @@ class Trending {
         
         return Promise { fulfill, reject in
             let request = Alamofire.request(Router.Ranking(language: "swift"))
-            Alamofire.request(Router.Ranking(language: "swift")).response({ request, response, data, error in
+            request.response({ request, response, data, error in
                 if let error = error {
                     reject(error)
                 } else {
-                    if let doc = Kanna.HTML(html: data!, encoding: NSUTF8StringEncoding) {
-                        for node in doc.css(".repo-list-item") {
-                            let repoListName = dropUnneccessaryElement(doc.css(".repo-list-name")[elementIndex].text!)
-                            let repoListDescription = dropUnneccessaryElement(doc.css(".repo-list-description")[elementIndex].text!)
-                            
-                            var repository = Repository()
-                            repository.title = repoListName
-                            repository.description = repoListDescription
-                            repositories.append(repository)
-                            
-                            elementIndex++
+                    if let data = data {
+                        if let doc = Kanna.HTML(html: data, encoding: NSUTF8StringEncoding) {
+                            for node in doc.css(".repo-list-item") {
+                                let repoListName = dropUnneccessaryElement(doc.css(".repo-list-name")[elementIndex].text!)
+                                let repoListDescription = dropUnneccessaryElement(doc.css(".repo-list-description")[elementIndex].text!)
+                                
+                                var repository = Repository()
+                                repository.title = repoListName
+                                repository.description = repoListDescription
+                                repositories.append(repository)
+                                
+                                elementIndex++
+                            }
+                            fulfill(repositories)
                         }
-                        fulfill(repositories)
                     }
                 }
             })
