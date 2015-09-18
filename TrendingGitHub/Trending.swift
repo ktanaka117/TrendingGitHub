@@ -26,12 +26,14 @@ class Trending {
                     if let data = data {
                         if let doc = Kanna.HTML(html: data, encoding: NSUTF8StringEncoding) {
                             for node in doc.css(".repo-list-item") {
-                                let repoListName = dropUnneccessaryElement(doc.css(".repo-list-name")[elementIndex].text!)
-                                let repoListDescription = dropUnneccessaryElement(doc.css(".repo-list-description")[elementIndex].text!)
+                                let repoBuilder = doc.css(".prefix")[elementIndex].text!
+                                let repoName = getTitle(dropUnneccessaryElement(doc.css(".repo-list-name")[elementIndex].text!))
+                                let repoDescription = dropUnneccessaryElement(doc.css(".repo-list-description")[elementIndex].text!)
                                 
                                 var repository = Repository()
-                                repository.title = repoListName
-                                repository.description = repoListDescription
+                                repository.builder = repoBuilder
+                                repository.title = repoName
+                                repository.description = repoDescription
                                 repositories.append(repository)
                                 
                                 elementIndex++
