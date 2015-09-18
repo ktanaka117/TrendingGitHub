@@ -45,6 +45,12 @@ class Trending {
     }
 }
 
+func getTitle(text: String) -> String {
+    var str: NSString = text
+    var loc = str.rangeOfString("/").location
+    return str.substringFromIndex(loc+1)
+}
+
 func dropUnneccessaryElement(text: String) -> String {
     let nDrop = text.stringByReplacingOccurrencesOfString("\n", withString: "", options: nil, range: nil)
     let spaceDrop = nDrop.stringByReplacingOccurrencesOfString(" ", withString: "", options: nil, range: nil)
