@@ -35,6 +35,7 @@ class RepositoryDetailViewController: UIViewController {
         super.viewDidLoad()
 
         textView = UITextView(frame: view.frame)
+        textView.dataDetectorTypes = UIDataDetectorTypes.Link
         view.addSubview(textView)
         
         loadReadme()
