@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import PromiseKit
 
 class RepositoryDetailViewController: UIViewController {
     
@@ -22,6 +23,12 @@ class RepositoryDetailViewController: UIViewController {
         super.viewDidLoad()
         
         view.backgroundColor = UIColor.whiteColor()
+
+        firstly {
+            Trending.getReadmeTask()
+        }.then { readme in
+            println(readme)
+        }
     }
     
 }
