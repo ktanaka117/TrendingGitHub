@@ -14,13 +14,21 @@ class RepositoryDetailViewController: UIViewController {
     
     var textView: UITextView!
     var markdown: String?
+    var repository: Repository!
     
     required init(coder aDecoder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
+        super.init(coder: aDecoder)
     }
     
     override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: NSBundle?) {
         super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
+    }
+    
+    convenience init(repository: Repository) {
+        self.init()
+        
+        self.repository = repository
+        self.title = repository.title
     }
     
     override func viewDidLoad() {
@@ -34,7 +42,7 @@ class RepositoryDetailViewController: UIViewController {
     
     func loadReadme() {
         firstly {
-            Trending.getReadmeTask()
+            Trending.getReadmeTask("Alamofire", repositoryName: "Alamofire")
         }.then { readme in
             self.markdown = readme
         }.finally {

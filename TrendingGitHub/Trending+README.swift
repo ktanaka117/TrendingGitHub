@@ -13,9 +13,9 @@ import PromiseKit
 
 extension Trending {
     
-    class func getReadmeTask() -> Promise<String> {
+    class func getReadmeTask(builder: String, repositoryName: String) -> Promise<String> {
         return Promise { fulfill, reject in
-            let request = Alamofire.request(Router.Readme(builder: "Alamofire", repositoryTitle: "Alamofire"))
+            let request = Alamofire.request(Router.Readme(builder: builder, repositoryTitle: repositoryName))
             request.response({ request, response, data, error in
                 if let error = error {
                     reject(error)
