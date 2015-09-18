@@ -42,7 +42,7 @@ class RepositoryDetailViewController: UIViewController {
     
     func loadReadme() {
         firstly {
-            Trending.getReadmeTask("Alamofire", repositoryName: "Alamofire")
+            Trending.getReadmeTask(self.repository.builder, repositoryName: self.repository.title)
         }.then { readme in
             self.markdown = readme
         }.finally {
