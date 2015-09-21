@@ -32,7 +32,7 @@
                             </mask>
                         </variation>
                     </imageView>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ktanaka117" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IB5-gU-Q4Q">
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Builder" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IB5-gU-Q4Q">
                         <rect key="frame" x="8" y="76" width="60" height="12"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="12" id="tKw-dz-N8z"/>
@@ -41,13 +41,13 @@
                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TrendingGitHub" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dkx-iV-AMX">
-                        <rect key="frame" x="76" y="24" width="155" height="27"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="RepositoryTitle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dkx-iV-AMX">
+                        <rect key="frame" x="76" y="24" width="343" height="27"/>
                         <fontDescription key="fontDescription" type="system" pointSize="22"/>
                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="This app show you Trending Repositories." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8pM-4l-SCf">
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8pM-4l-SCf">
                         <rect key="frame" x="76" y="59" width="343" height="12"/>
                         <fontDescription key="fontDescription" type="system" pointSize="10"/>
                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -62,6 +62,7 @@
                     <constraint firstItem="m03-me-CJL" firstAttribute="top" secondItem="4DQ-uA-byq" secondAttribute="top" constant="8" id="ODJ-Ft-DOp"/>
                     <constraint firstAttribute="bottom" secondItem="IB5-gU-Q4Q" secondAttribute="bottom" constant="8" id="Wpg-bo-uOo"/>
                     <constraint firstAttribute="bottom" secondItem="8pM-4l-SCf" secondAttribute="bottom" constant="8" id="aBq-Sa-pEp"/>
+                    <constraint firstAttribute="trailing" secondItem="Dkx-iV-AMX" secondAttribute="trailing" constant="8" id="eHw-y6-zl7"/>
                     <constraint firstAttribute="trailing" secondItem="m03-me-CJL" secondAttribute="trailing" id="kJS-iW-Ph1"/>
                     <constraint firstItem="Dkx-iV-AMX" firstAttribute="leading" secondItem="m03-me-CJL" secondAttribute="trailing" constant="8" id="kwE-0L-uUP"/>
                     <constraint firstItem="8pM-4l-SCf" firstAttribute="leading" secondItem="m03-me-CJL" secondAttribute="trailing" constant="8" id="oI8-WE-uOx"/>
