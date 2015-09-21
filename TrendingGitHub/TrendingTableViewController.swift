@@ -11,7 +11,7 @@ import PromiseKit
 
 let cellID = "Cell"
 
-class TopTableViewController: UITableViewController {
+class TrendingTableViewController: UITableViewController {
     
     var repositories: [Repository] = []
     

@@ -12,7 +12,7 @@
 		2963513F1BA84D7C00C5AEC2 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2963513E1BA84D7C00C5AEC2 /* Router.swift */; };
 		2969AE931BA1862200B354A6 /* RepositoryDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2969AE921BA1862200B354A6 /* RepositoryDetailViewController.swift */; };
 		2990B9431BA154C000031B47 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2990B9421BA154C000031B47 /* AppDelegate.swift */; };
-		2990B9451BA154C000031B47 /* TopTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2990B9441BA154C000031B47 /* TopTableViewController.swift */; };
+		2990B9451BA154C000031B47 /* TrendingTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2990B9441BA154C000031B47 /* TrendingTableViewController.swift */; };
 		2990B9481BA154C000031B47 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2990B9461BA154C000031B47 /* Main.storyboard */; };
 		2990B94A1BA154C000031B47 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2990B9491BA154C000031B47 /* Images.xcassets */; };
 		2990B94D1BA154C000031B47 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2990B94B1BA154C000031B47 /* LaunchScreen.xib */; };
@@ -41,7 +41,7 @@
 		2990B93D1BA154C000031B47 /* TrendingGitHub.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TrendingGitHub.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2990B9411BA154C000031B47 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2990B9421BA154C000031B47 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		2990B9441BA154C000031B47 /* TopTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopTableViewController.swift; sourceTree = "<group>"; };
+		2990B9441BA154C000031B47 /* TrendingTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrendingTableViewController.swift; sourceTree = "<group>"; };
 		2990B9471BA154C000031B47 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		2990B9491BA154C000031B47 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		2990B94C1BA154C000031B47 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
@@ -116,7 +116,7 @@
 				296135831BA4044C0008DB17 /* Models */,
 				296135821BA404370008DB17 /* Networking */,
 				2990B9421BA154C000031B47 /* AppDelegate.swift */,
-				2990B9441BA154C000031B47 /* TopTableViewController.swift */,
+				2990B9441BA154C000031B47 /* TrendingTableViewController.swift */,
 				2969AE921BA1862200B354A6 /* RepositoryDetailViewController.swift */,
 				2958317F1BAA892E0087A23A /* TrendingGitHub-Bridging-Header.h */,
 				2990B9461BA154C000031B47 /* Main.storyboard */,
@@ -323,7 +323,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				29E660A01BA95B32008F55A1 /* Trending.swift in Sources */,
-				2990B9451BA154C000031B47 /* TopTableViewController.swift in Sources */,
+				2990B9451BA154C000031B47 /* TrendingTableViewController.swift in Sources */,
 				296135881BA406D40008DB17 /* Repository.swift in Sources */,
 				2963513F1BA84D7C00C5AEC2 /* Router.swift in Sources */,
 				2969AE931BA1862200B354A6 /* RepositoryDetailViewController.swift in Sources */,
