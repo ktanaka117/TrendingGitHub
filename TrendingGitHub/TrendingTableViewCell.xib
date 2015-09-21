@@ -7,14 +7,83 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="110" id="5rD-FU-2i8">
-            <rect key="frame" x="0.0" y="0.0" width="596" height="110"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="14" id="5rD-FU-2i8" customClass="TrendingTableViewCell" customModule="TrendingGitHub" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="427" height="103"/>
             <autoresizingMask key="autoresizingMask"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="5rD-FU-2i8" id="4DQ-uA-byq">
-                <rect key="frame" x="0.0" y="0.0" width="596" height="109"/>
+                <rect key="frame" x="0.0" y="0.0" width="427" height="102"/>
                 <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="m03-me-CJL">
+                        <rect key="frame" x="8" y="8" width="60" height="60"/>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="60" id="8UO-B5-i6a"/>
+                            <constraint firstAttribute="height" constant="50" id="c3a-bt-y80"/>
+                            <constraint firstAttribute="width" constant="50" id="ivy-Ya-XDt"/>
+                            <constraint firstAttribute="width" id="k9o-nX-F1m"/>
+                            <constraint firstAttribute="width" constant="60" id="mLz-Oz-mn3"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="c3a-bt-y80"/>
+                                <exclude reference="ivy-Ya-XDt"/>
+                                <exclude reference="k9o-nX-F1m"/>
+                            </mask>
+                        </variation>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ktanaka117" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IB5-gU-Q4Q">
+                        <rect key="frame" x="8" y="76" width="60" height="12"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="12" id="tKw-dz-N8z"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TrendingGitHub" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dkx-iV-AMX">
+                        <rect key="frame" x="76" y="24" width="155" height="27"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="This app show you Trending Repositories." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8pM-4l-SCf">
+                        <rect key="frame" x="76" y="59" width="343" height="12"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="8pM-4l-SCf" secondAttribute="trailing" constant="8" id="3qE-Tz-vGt"/>
+                    <constraint firstItem="Dkx-iV-AMX" firstAttribute="top" secondItem="4DQ-uA-byq" secondAttribute="top" constant="24" id="7WL-iM-kb7"/>
+                    <constraint firstItem="IB5-gU-Q4Q" firstAttribute="leading" secondItem="4DQ-uA-byq" secondAttribute="leading" constant="8" id="9DN-C9-iQw"/>
+                    <constraint firstItem="IB5-gU-Q4Q" firstAttribute="top" secondItem="m03-me-CJL" secondAttribute="bottom" constant="8" id="C1X-hj-5cD"/>
+                    <constraint firstItem="m03-me-CJL" firstAttribute="top" secondItem="4DQ-uA-byq" secondAttribute="top" constant="8" id="ODJ-Ft-DOp"/>
+                    <constraint firstAttribute="bottom" secondItem="IB5-gU-Q4Q" secondAttribute="bottom" constant="8" id="Wpg-bo-uOo"/>
+                    <constraint firstAttribute="bottom" secondItem="8pM-4l-SCf" secondAttribute="bottom" constant="8" id="aBq-Sa-pEp"/>
+                    <constraint firstAttribute="trailing" secondItem="m03-me-CJL" secondAttribute="trailing" id="kJS-iW-Ph1"/>
+                    <constraint firstItem="Dkx-iV-AMX" firstAttribute="leading" secondItem="m03-me-CJL" secondAttribute="trailing" constant="8" id="kwE-0L-uUP"/>
+                    <constraint firstItem="8pM-4l-SCf" firstAttribute="leading" secondItem="m03-me-CJL" secondAttribute="trailing" constant="8" id="oI8-WE-uOx"/>
+                    <constraint firstItem="IB5-gU-Q4Q" firstAttribute="width" secondItem="m03-me-CJL" secondAttribute="width" id="p97-YM-oFw"/>
+                    <constraint firstItem="m03-me-CJL" firstAttribute="leading" secondItem="4DQ-uA-byq" secondAttribute="leading" constant="8" id="xmI-S1-Ed7"/>
+                    <constraint firstItem="8pM-4l-SCf" firstAttribute="top" secondItem="Dkx-iV-AMX" secondAttribute="bottom" constant="8" id="zkh-8b-nkv"/>
+                </constraints>
+                <variation key="default">
+                    <mask key="constraints">
+                        <exclude reference="kJS-iW-Ph1"/>
+                        <exclude reference="Wpg-bo-uOo"/>
+                        <exclude reference="aBq-Sa-pEp"/>
+                    </mask>
+                </variation>
             </tableViewCellContentView>
-            <point key="canvasLocation" x="442" y="289"/>
+            <connections>
+                <outlet property="builderLabel" destination="IB5-gU-Q4Q" id="RNA-H8-32Y"/>
+                <outlet property="descriptionLabel" destination="8pM-4l-SCf" id="AcI-2P-P4J"/>
+                <outlet property="iconImageView" destination="m03-me-CJL" id="eBF-C0-uaE"/>
+                <outlet property="titleLabel" destination="Dkx-iV-AMX" id="b7F-1a-kh8"/>
+            </connections>
+            <point key="canvasLocation" x="263.5" y="213.5"/>
         </tableViewCell>
     </objects>
 </document>

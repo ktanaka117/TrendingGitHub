@@ -18,6 +18,7 @@
 		2990B94D1BA154C000031B47 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2990B94B1BA154C000031B47 /* LaunchScreen.xib */; };
 		2990B9591BA154C000031B47 /* TrendingGitHubTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2990B9581BA154C000031B47 /* TrendingGitHubTests.swift */; };
 		29C94BE51BAFF9F500BD710F /* TrendingTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 29C94BE41BAFF9F500BD710F /* TrendingTableViewCell.xib */; settings = {ASSET_TAGS = (); }; };
+		29C94BE71BAFFD5800BD710F /* TrendingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29C94BE61BAFFD5800BD710F /* TrendingTableViewCell.swift */; settings = {ASSET_TAGS = (); }; };
 		29E660A01BA95B32008F55A1 /* Trending.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29E6609F1BA95B32008F55A1 /* Trending.swift */; };
 		5A27F831F93230DC9D9B9F9E /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B27EDCD17168F655A02BC224 /* Pods.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 /* End PBXBuildFile section */
@@ -50,6 +51,7 @@
 		2990B9571BA154C000031B47 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2990B9581BA154C000031B47 /* TrendingGitHubTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrendingGitHubTests.swift; sourceTree = "<group>"; };
 		29C94BE41BAFF9F500BD710F /* TrendingTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TrendingTableViewCell.xib; sourceTree = "<group>"; };
+		29C94BE61BAFFD5800BD710F /* TrendingTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrendingTableViewCell.swift; sourceTree = "<group>"; };
 		29E6609F1BA95B32008F55A1 /* Trending.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Trending.swift; sourceTree = "<group>"; };
 		81F962D5AB58806ED1512245 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		B27EDCD17168F655A02BC224 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -123,6 +125,7 @@
 				2958317F1BAA892E0087A23A /* TrendingGitHub-Bridging-Header.h */,
 				2990B9461BA154C000031B47 /* Main.storyboard */,
 				29C94BE41BAFF9F500BD710F /* TrendingTableViewCell.xib */,
+				29C94BE61BAFFD5800BD710F /* TrendingTableViewCell.swift */,
 				2990B9491BA154C000031B47 /* Images.xcassets */,
 				2990B94B1BA154C000031B47 /* LaunchScreen.xib */,
 				2990B9401BA154C000031B47 /* Supporting Files */,
@@ -330,6 +333,7 @@
 				2990B9451BA154C000031B47 /* TrendingTableViewController.swift in Sources */,
 				296135881BA406D40008DB17 /* Repository.swift in Sources */,
 				2963513F1BA84D7C00C5AEC2 /* Router.swift in Sources */,
+				29C94BE71BAFFD5800BD710F /* TrendingTableViewCell.swift in Sources */,
 				2969AE931BA1862200B354A6 /* RepositoryDetailViewController.swift in Sources */,
 				295831811BAA8C300087A23A /* Trending+README.swift in Sources */,
 				2990B9431BA154C000031B47 /* AppDelegate.swift in Sources */,
