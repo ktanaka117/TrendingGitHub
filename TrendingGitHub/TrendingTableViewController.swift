@@ -18,7 +18,7 @@ class TrendingTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        tableView.registerClass(UITableViewCell.self, forCellReuseIdentifier: cellID)
+        tableView.registerNib(UINib(nibName: "TrendingTableViewCell", bundle: nil), forCellReuseIdentifier: cellID)
         
         loadTrending()
     }
@@ -43,11 +43,17 @@ class TrendingTableViewController: UITableViewController {
     }
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = UITableViewCell(style: UITableViewCellStyle.Subtitle, reuseIdentifier: cellID)
-        cell.textLabel?.text = repositories[indexPath.row].title
-        cell.detailTextLabel?.text = repositories[indexPath.row].description
+        
+        let cell = tableView.dequeueReusableCellWithIdentifier(cellID, forIndexPath: indexPath) as! TrendingTableViewCell
+        cell.builderLabel.text = repositories[indexPath.row].builder
+        cell.titleLabel.text = repositories[indexPath.row].title
+        cell.descriptionLabel.text = repositories[indexPath.row].description
         
         return cell
+    }
+    
+    override func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+        return 96
     }
     
     func dropUnneccessaryElement(text: String) -> String {
