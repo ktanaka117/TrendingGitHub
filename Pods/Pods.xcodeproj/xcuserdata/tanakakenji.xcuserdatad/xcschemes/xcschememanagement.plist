@@ -7,22 +7,22 @@
 		<key>Alamofire.xcscheme</key>
 		<dict>
 			<key>isShown</key>
-			<false/>
+			<true/>
 		</dict>
 		<key>FLAnimatedImage.xcscheme</key>
 		<dict>
 			<key>isShown</key>
-			<false/>
+			<true/>
 		</dict>
 		<key>Kanna.xcscheme</key>
 		<dict>
 			<key>isShown</key>
-			<false/>
+			<true/>
 		</dict>
 		<key>MMMarkdown.xcscheme</key>
 		<dict>
 			<key>isShown</key>
-			<false/>
+			<true/>
 		</dict>
 		<key>OMGHTTPURLRQ.xcscheme</key>
 		<dict>
@@ -37,52 +37,42 @@
 		<key>PromiseKit.xcscheme</key>
 		<dict>
 			<key>isShown</key>
-			<false/>
-		</dict>
-		<key>SwiftyJSON.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
+			<true/>
 		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>51EF939425645941668A348E2F718DB1</key>
+		<key>0A2AF47C08FE0D26894346DD0DC65186</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>7FB0273BD073CEE3D2A1E5EC8DFB2D59</key>
+		<key>14B32D40DF3F6409ED79C9564744934D</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>A522C126D7EE49A8FF583D2A21AD23BB</key>
+		<key>55DE2F0A99BAA0A8BDE74A0A24ACF170</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>B9A04D3C9B208813656510FDA8ADAE02</key>
+		<key>7553527084ECA91A6E3C0D45E20A70B2</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>D58BBC036C9D96087C08C04FD0F7FD6C</key>
+		<key>7F1A794D2E40D7886911412489A1FC40</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>E8F21AA9D15BA46D3AD747BE3A33E04B</key>
+		<key>C63E2D2EF023BACCE5536A1DF1E92C55</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>F6FADE019EC603E32D9A08D44E2C7E9E</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>FE0138BF2DABA98BFAB9509D90C7F69B</key>
+		<key>CBCAE8B4350FCB0335F726636B86ED43</key>
 		<dict>
 			<key>primary</key>
 			<true/>

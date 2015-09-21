@@ -19,7 +19,7 @@ class Trending {
         
         return Promise { fulfill, reject in
             let request = Alamofire.request(Router.Ranking(language: "swift"))
-            request.response({ request, response, data, error in
+            request.response { request, response, data, error in
                 if let error = error {
                     reject(error)
                 } else {
@@ -42,20 +42,20 @@ class Trending {
                         }
                     }
                 }
-            })
+            }
         }
     }
 }
 
 func getTitle(text: String) -> String {
-    var str: NSString = text
-    var loc = str.rangeOfString("/").location
+    let str: NSString = text
+    let loc = str.rangeOfString("/").location
     return str.substringFromIndex(loc+1)
 }
 
 func dropUnneccessaryElement(text: String) -> String {
-    let nDrop = text.stringByReplacingOccurrencesOfString("\n", withString: "", options: nil, range: nil)
-    let spaceDrop = nDrop.stringByReplacingOccurrencesOfString(" ", withString: "", options: nil, range: nil)
+    let nDrop = text.stringByReplacingOccurrencesOfString("\n", withString: "", options: [], range: nil)
+    let spaceDrop = nDrop.stringByReplacingOccurrencesOfString(" ", withString: "", options: [], range: nil)
     
     return spaceDrop
 }

@@ -16,7 +16,7 @@ class RepositoryDetailViewController: UIViewController {
     var markdown: String?
     var repository: Repository!
     
-    required init(coder aDecoder: NSCoder) {
+    required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
     }
     
@@ -46,10 +46,10 @@ class RepositoryDetailViewController: UIViewController {
             Trending.getReadmeTask(self.repository.builder, repositoryName: self.repository.title)
         }.then { readme in
             self.markdown = readme
-        }.finally {
-            let html = MMMarkdown.HTMLStringWithMarkdown(self.markdown!, extensions: MMMarkdownExtensions.GitHubFlavored, error: nil)
+        }.ensure {
+            let html = try? MMMarkdown.HTMLStringWithMarkdown(self.markdown!, extensions: MMMarkdownExtensions.GitHubFlavored)
             let options = [NSDocumentTypeDocumentAttribute: NSHTMLTextDocumentType]
-            let preview = NSAttributedString(data: html.dataUsingEncoding(NSUTF8StringEncoding)!, options: options, documentAttributes: nil, error: nil)
+            let preview = try? NSAttributedString(data: html!.dataUsingEncoding(NSUTF8StringEncoding)!, options: options, documentAttributes: nil)
             
             self.textView.attributedText = preview
             self.textView.editable = false

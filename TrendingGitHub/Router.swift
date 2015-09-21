@@ -23,7 +23,7 @@ enum Router: URLRequestConvertible {
     }
     
     // MARK: - URLRequestConvertible
-    var URLRequest: NSURLRequest {
+    var URLRequest: NSMutableURLRequest {
         let mutableURLRequest = NSMutableURLRequest(URL: NSURL(string: URLString)!)
         
         return mutableURLRequest

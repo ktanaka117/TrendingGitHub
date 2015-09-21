@@ -28,7 +28,7 @@ class TopTableViewController: UITableViewController {
             Trending.getTrendingTask()
         }.then { repositories in
             self.repositories = repositories
-        }.finally {
+        }.ensure {
             self.tableView.reloadData()
         }
     }
@@ -51,8 +51,8 @@ class TopTableViewController: UITableViewController {
     }
     
     func dropUnneccessaryElement(text: String) -> String {
-        let nDrop = text.stringByReplacingOccurrencesOfString("\n", withString: "", options: nil, range: nil)
-        let spaceDrop = nDrop.stringByReplacingOccurrencesOfString(" ", withString: "", options: nil, range: nil)
+        let nDrop = text.stringByReplacingOccurrencesOfString("\n", withString: "", options: [], range: nil)
+        let spaceDrop = nDrop.stringByReplacingOccurrencesOfString(" ", withString: "", options: [], range: nil)
         
         return spaceDrop
     }
