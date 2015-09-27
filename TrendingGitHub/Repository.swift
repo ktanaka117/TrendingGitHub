@@ -10,7 +10,7 @@ import Foundation
 
 struct Repository {
     var title: String!
-    var description: String!
+    var description: String?
     var star: Int!
     var builder: String!
     

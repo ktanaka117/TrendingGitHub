@@ -14,7 +14,6 @@ import PromiseKit
 class Trending {
     class func getTrendingTask() -> Promise<[Repository]> {
         
-        var elementIndex = 0
         var repositories: [Repository] = []
         
         return Promise { fulfill, reject in
@@ -25,18 +24,16 @@ class Trending {
                 } else {
                     if let data = data {
                         if let doc = Kanna.HTML(html: data, encoding: NSUTF8StringEncoding) {
-                            for node in doc.css(".repo-list-item") {
-                                let repoBuilder = doc.css(".prefix")[elementIndex].text!
-                                let repoName = getTitle(dropUnneccessaryElement(doc.css(".repo-list-name")[elementIndex].text!))
-                                let repoDescription = dropUnneccessaryElement(doc.css(".repo-list-description")[elementIndex].text!)
+                            for var i = 0; i < doc.css(".repo-list-item").count-1; i++ {
+                                let repoBuilder = doc.css(".prefix")[i].text!
+                                let repoName = getTitle(dropUnneccessaryElement(doc.css(".repo-list-name")[i].text!))
+                                let repoDescription = dropUnneccessaryElement(doc.css(".repo-list-description")[i].text!)
                                 
                                 var repository = Repository()
                                 repository.builder = repoBuilder
                                 repository.title = repoName
                                 repository.description = repoDescription
                                 repositories.append(repository)
-                                
-                                elementIndex++
                             }
                             fulfill(repositories)
                         }
